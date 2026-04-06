@@ -1,0 +1,174 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="admin.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<div class="sidebar">
+<h2>⚡ AI Panel</h2>
+<ul>
+<li class="active">Dashboard</li>
+<li onclick="location.href='admin-applications.html'">Applications</li>
+<li onclick="location.href='admin-jobs.html'">Jobs</li>
+<li onclick="logout()">Logout</li>
+</ul>
+</div>
+
+
+<div class="main-content">
+
+<h1>🚀 AI Resume Analytics</h1>
+
+<div class="welcome-box">
+<h2>Welcome HR 👋</h2>
+<p>AI Recruitment Dashboard Overview</p>
+</div>
+
+<div class="stats-grid">
+
+<div class="card neon-blue">
+<h3>Total Applicants</h3>
+<span id="totalCount">0</span>
+</div>
+
+<div class="card neon-pink">
+<h3>Shortlisted</h3>
+<span id="shortlistedCount">0</span>
+</div>
+
+<div class="card neon-purple">
+<h3>Interviews</h3>
+<span id="interviewCount">0</span>
+</div>
+
+<div class="card neon-green">
+<h3>Selected</h3>
+<span id="selectedCount">0</span>
+</div>
+
+<div class="card neon-red">
+<h3>Rejected</h3>
+<span id="rejectedCount">0</span>
+</div>
+
+<div class="card neon-orange">
+<h3>Selection Rate</h3>
+<span id="selectionRate">0%</span>
+</div>
+
+</div>
+<div class="dashboard-panels">
+
+<div class="panel">
+<h3>🏆 Top Candidates</h3>
+<ul id="topCandidates"></ul>
+</div>
+
+<div class="panel">
+<h3>⚡ Recent Activity</h3>
+<ul id="recentActivity">
+<li>System Loaded</li>
+</ul>
+</div>
+
+<div class="panel">
+<h3>📅 Upcoming Interviews</h3>
+<ul id="interviewList">
+<li>No interviews scheduled</li>
+</ul>
+</div>
+<div class="pipeline-box">
+
+<h3>📊 Recruitment Pipeline</h3>
+
+<div class="pipeline-item">
+<span>Applications</span>
+<div class="progress">
+<div class="progress-bar blue" id="appProgress"></div>
+</div>
+</div>
+
+<div class="pipeline-item">
+<span>Shortlisted</span>
+<div class="progress">
+<div class="progress-bar green" id="shortProgress"></div>
+</div>
+</div>
+
+<div class="pipeline-item">
+<span>Interview</span>
+<div class="progress">
+<div class="progress-bar purple" id="interviewProgress"></div>
+</div>
+</div>
+
+<div class="pipeline-item">
+<span>Selected</span>
+<div class="progress">
+<div class="progress-bar blue" id="selectProgress"></div>
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+
+<div class="ranking-section">
+
+<h2>🏆 Candidate Ranking</h2>
+
+<table class="ranking-table">
+
+<thead>
+<tr>
+<th>Rank</th>
+<th>Name</th>
+<th>Email</th>
+<th>Score</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="rankingTable"></tbody>
+
+</table>
+
+</div>
+<div class="charts">
+
+<canvas id="statusChart"></canvas>
+
+<canvas id="pieChart"></canvas>
+
+</div>
+<div class="clock-box">
+<h3>🕒 System Time</h3>
+<div id="clock"></div>
+
+
+<div class="quote-box">
+
+<h3>💡 HR Tip of the Day</h3>
+
+<p id="quoteText"></p>
+
+</div>
+
+</div>
+</div>
+
+
+<script src="admin.js"></script>
+</body>
+</html>
+

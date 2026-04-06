@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Resume Screening System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+  <h2>🚀 AI Resume Screening</h2>
+
+  <form id="candidateForm">
+
+    <div class="input-group">
+      <label>Full Name</label>
+      <input type="text" id="name" required>
+    </div>
+
+    <div class="input-group">
+      <label>Email Address</label>
+      <input type="email" id="email" required>
+    </div>
+
+    <div class="input-group">
+      <label>Phone Number</label>
+      <input type="tel" id="phone" pattern="[0-9]{10}" maxlength="10" required>
+    </div>
+
+    <div class="skills-box">
+      <label>Select Skills:</label>
+      <div class="skills-options">
+        <label><input type="checkbox" value="HTML"> HTML</label>
+        <label><input type="checkbox" value="CSS"> CSS</label>
+        <label><input type="checkbox" value="JavaScript"> JavaScript</label>
+        <label><input type="checkbox" value="Python"> Python</label>
+        <label><input type="checkbox" value="Java"> Java</label>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label>Years of Experience</label>
+      <input type="number" id="experience" required>
+    </div>
+
+    <div class="input-group">
+      <label>Select Job</label>
+      <select id="jobSelect">
+        <option value="">Loading Jobs...</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Upload Resume (PDF)</label>
+      <input type="file" id="resumeFile" accept="application/pdf" required>
+    </div>
+
+    <button type="submit" class="submit-btn">
+      <span class="btn-text">Apply Now</span>
+      <span class="loader"></span>
+    </button>
+
+  </form>
+  <p style="text-align:center; margin-top:15px;">
+<a href="track.html" style="color:#38bdf8; font-size:14px;">
+Check Application Status
+</a>
+</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

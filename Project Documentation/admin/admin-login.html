@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="login-body">
+
+<div class="particles"></div>
+
+<div class="login-container">
+  <div class="login-card">
+    <h2>🔐 Admin Login</h2>
+
+    <form id="loginForm">
+
+      <div class="input-group">
+        <input type="email" id="adminEmail" required>
+        <label>Email Address</label>
+      </div>
+
+      <div class="input-group password-group">
+        <input type="password" id="adminPassword" required>
+        <label>Password</label>
+        <span class="toggle-password" onclick="togglePassword()">👁</span>
+      </div>
+
+      <button type="submit" class="login-btn">
+        <span class="btn-text">Login</span>
+        <span class="loader"></span>
+      </button>
+
+      <p id="loginMessage" class="error-text"></p>
+
+    </form>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
